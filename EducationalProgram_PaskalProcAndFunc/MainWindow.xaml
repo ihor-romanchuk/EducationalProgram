@@ -1,0 +1,116 @@
+﻿<Window x:Class="EducationalProgram_PaskalProcAndFunc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EducationalProgram_PaskalProcAndFunc"
+        mc:Ignorable="d"
+        Title="Процедури і функції у мові Pascal" Height="750" Width="1200" MinHeight="720" MinWidth="1050">
+    <Grid>
+        <Menu x:Name="menu" VerticalAlignment="Top" Background="#FF2D2D30" Foreground="White">
+            <MenuItem x:Name="menuitemTheory" Header="Навчання" FontSize="21.333" Click="menuitemTheory_Click" Height="40"/>
+            <MenuItem x:Name="menuitemTests" Header="Почати тестування" FontSize="21.333" Click="menuitemTests_Click" />
+            <MenuItem x:Name="menuitemAbout" Header="Про програму" FontSize="21.333" Click="menuitemAbout_Click" />
+        </Menu>
+        <Grid Name="GridTheory" Margin="0,40,0,0" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="315"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView x:Name="treeViewContent" SelectedItemChanged="treeViewContent_SelectedItemChanged" Background="White" FontFamily="Tahoma" FontSize="18">
+                <TreeView.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                      Color="#FF4CAF50" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
+                      Color="Black" />
+                    <!--<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                      Color="#FF4CAF50" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}"
+                      Color="Black" />-->
+                </TreeView.Resources>
+            </TreeView>
+            <RichTextBox x:Name="richTextBoxTheory" IsReadOnly="True" Grid.Column="1" VerticalScrollBarVisibility="Visible" Visibility="{Binding ElementName=GridTheory,Path=Visibility}" Margin="0,0,0,65">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Button x:Name="theoryPreviousBtn" Grid.Column="1" IsEnabled="false" Width="150" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="35,0,0,10" Content="&lt; Попередня" FontSize="21.333" FontFamily="Tahoma" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" IsCancel="True" Click="TheoryPrevious_Click" />
+            <Button x:Name="theoryNextBtn" Grid.Column="1" Width="150" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,44,10" Content="Наступна &gt;" FontSize="21.333" FontFamily="Tahoma" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" IsCancel="True" Click="TheoryNext_Click" />
+        </Grid>
+        <Grid Name="GridTests" Margin="0,40,0,0" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView x:Name="treeViewTests" Background="White" FontFamily="Tahoma" FontSize="18" SelectedItemChanged="treeViewTests_SelectedItemChanged">
+                <TreeView.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                      Color="#FF4CAF50" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
+                      Color="Black" />
+                    <!--<SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                      Color="#FF4CAF50" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}"
+                      Color="Black" />-->
+                </TreeView.Resources>
+            </TreeView>
+            <Grid Grid.Column="1" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Label x:Name="labelQuestion" Content="Питання #1" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="24"/>
+                <TextBox x:Name="textBoxQuestion" FontFamily="Tahoma" Text="Text" TextWrapping="Wrap" AcceptsReturn="True" Margin="10,0,10,10" VerticalAlignment="Bottom" FontSize="21.333" Background="#FFDDFFDD" BorderBrush="#FF54FF42"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid x:Name="gridAnswers" VerticalAlignment="Top" Height="220" Background="#FFDDFFDD" Margin="20,30,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                            </Grid.RowDefinitions>
+                            <CheckBox x:Name="checkBox1" FontFamily="Tahoma" Margin="5,0,0,0" FontSize="18.667" VerticalAlignment="Center" Checked="checkBox_Checked" BorderBrush="#FF002700">
+                                <TextBlock TextWrapping="Wrap" Text="A" />
+                            </CheckBox>
+                            <CheckBox x:Name="checkBox2" Grid.Row="1" FontFamily="Tahoma" Margin="5,0,0,0" FontSize="18.667" VerticalAlignment="Center" Checked="checkBox_Checked">
+                                <TextBlock TextWrapping="Wrap" Text="B" />
+                            </CheckBox>
+                            <CheckBox x:Name="checkBox3" Grid.Row="2" FontFamily="Tahoma" Margin="5,0,0,0" FontSize="18.667" VerticalAlignment="Center" Checked="checkBox_Checked">
+                                <TextBlock TextWrapping="Wrap" Text="C" />
+                            </CheckBox>
+                            <CheckBox x:Name="checkBox4" Grid.Row="3" FontFamily="Tahoma" Margin="5,0,0,0" FontSize="18.667" VerticalAlignment="Center" Checked="checkBox_Checked">
+                                <TextBlock TextWrapping="Wrap" Text="D" />
+                            </CheckBox>
+                            <CheckBox x:Name="checkBox5" Grid.Row="4" FontFamily="Tahoma" Margin="5,0,0,0" FontSize="18.667" VerticalAlignment="Center" Checked="checkBox_Checked">
+                                <TextBlock TextWrapping="Wrap" Text="E" />
+                            </CheckBox>
+                        </Grid>
+                        <Button x:Name="buttonConfirm" FontFamily="Tahoma" Content="Підтвердити" HorizontalAlignment="Center" Margin="0,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" Height="47" Click="buttonConfirm_Click" FontSize="21.333" BorderBrush="White" Background="#FF00B632" Foreground="White"/>
+                    </Grid>
+                    <Label x:Name="labelQuestionsLeft" Grid.Column="1" Content="Залишилося N питань" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="21.333" Foreground="#FF068500" Margin="0,20,0,0"></Label>
+                </Grid>
+                <Button x:Name="testsPreviousBtn" FontFamily="Tahoma" Content="Попереднє питання" HorizontalAlignment="Left" Margin="30,0,0,20" Grid.Row="2" VerticalAlignment="Bottom" Click="testsPreviousBtn_Click" FontSize="21.333" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" Height="50" Width="220" IsEnabled="False"/>
+                <Button x:Name="testsNextBtn" FontFamily="Tahoma" Content="Наступне питання" HorizontalAlignment="Right" Margin="0,0,30,20" Grid.Row="2" VerticalAlignment="Bottom" Click="testsNextBtn_Click" Height="50" FontSize="21.333" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" Width="220"/>
+                <Button x:Name="buttonFinishTests" FontFamily="Tahoma" Content="Завершити тестування" HorizontalAlignment="Center" Margin="0,10,0,20" Grid.Row="2" VerticalAlignment="Bottom" Height="50" Click="buttonFinishTests_Click" FontSize="21.333" Background="#FF007E3E" Foreground="White" BorderBrush="#FF490000" Width="250"/>
+            </Grid>
+        </Grid>
+        <Grid Name="GridAbout" Margin="0,45,0,0" Visibility="Hidden">
+            <RichTextBox x:Name="richTextBoxAbout" IsReadOnly="True" Grid.Column="1" VerticalScrollBarVisibility="Visible">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+    </Grid>
+</Window>

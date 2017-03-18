@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTestQuestionWithAnswerModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TestQuestionWithAnswerModel>
+    <Id>1</Id>
+    <Question>Для чого використовують процедури і функції у мові Pascal?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Щоб розбити програму на окремі смислові частини та перевикористовувати код</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Щоб оптимізувати швидкодію</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>У цілях безпеки</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише для зручності</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише для уникання дублювання коду</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>2</Id>
+    <Question>Процедури і функції - це:</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Підпрограми</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Модулі програми</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Алгоритми</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Типи даних мови Pascal</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Оператори</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>3</Id>
+    <Question>Де розміщують процедури і функції?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>У розділі описів програми</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>На початку файлу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>У кінці файлу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>У розділі процедур і функцій</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>В основному блоці програми</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>4</Id>
+    <Question>Для обміну інформацією між процедурами і функціями і іншими блоками програми існує механізм...?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>вхідних і вихідних параметрів</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>початкових і кінцевих параметрів</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>перехресного виклику</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>вхідних і вихідних функцій</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>використання глобальних змінних</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>5</Id>
+    <Question>Що стає можливим з наявністю вхідних параметрів у функціях чи процедурах?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Мати різну поведінку в залежності від вхідних даних, змінювати значення цих параметрів</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Виконувати більше роботи за той самий час</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Нічого нового</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише змінювати значення цих параметрів</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише мати різну поведінку в залежності від вхідних даних</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>6</Id>
+    <Question>У чому відмінність між процедурою і функцією?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Функція повертає якесь значення, а процедура ні</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Процедура повертає якесь значення, а функція ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише у форматі оголошення</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Функція дозволяє змінювати значення змінних, які передаються як параметри при виклику, а процедура ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Процедура дозволяє змінювати значення змінних, які передаються як параметри при виклику, а функція ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>7</Id>
+    <Question>Яке твердження вірне?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Функція повертає якесь значення, а процедура ні</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Процедура повертає якесь значення, а функція ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Функції і процедури повністю взаємозамінні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Функція дозволяє змінювати значення змінних, які передаються як параметри при виклику, а процедура ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Процедура дозволяє змінювати значення змінних, які передаються як параметри при виклику, а функція ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>8</Id>
+    <Question>Яке твердження вірне?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Використання будь-якої процедури можна замінити використанням функції із такою ж виконуваною частиною</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Використання будь-якої функції можна замінити використанням процедури із такою ж виконуваною частиною</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Функції і процедури повністю взаємозамінні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Функція дозволяє змінювати значення змінних, які передаються як параметри при виклику, а процедура ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Процедура дозволяє змінювати значення змінних, які передаються як параметри при виклику, а функція ні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>9</Id>
+    <Question>Виберіть правильний формат опису(оголошення) процедури?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>procedure ім'я процедури (формальні параметри);</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure ім'я функції (формальні параметри): тип результату;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure ім'я функції (фактичні параметри): тип результату;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure ім'я процедури (фактичні параметри);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function ім'я функції (формальні параметри): тип результату</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>10</Id>
+    <Question>Виберіть правильний формат опису(оголошення) процедури?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>function ім'я процедури (формальні параметри): тип результату;</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function ім'я функції (формальні параметри);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function ім'я функції (фактичні параметри): тип результату;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function ім'я процедури (фактичні параметри);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure ім'я функції (формальні параметри): тип результату</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>11</Id>
+    <Question>Як правильно записувати формальні параметри в заголовках процедур і функцій?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>var ім'я параметру: ім'я типу</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я типу: ім'я параметру</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я типу ім'я параметру</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я параметру:= ім'я типу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я параметру = ім'я типу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>12</Id>
+    <Question>Виберіть правильне твердження</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>При описі процедури імена формальних параметрів можна перераховувати через кому, якщо вони однотипні</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>При описі процедури імена формальних параметрів можна перераховувати через двокрапку, якщо вони однотипні</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>При описі процедури імена формальних параметрів можна перераховувати через крапку з комою</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>При описі функції тип результату можна не вказувати</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Якщо залишити виконувану частину функції порожньою, то ми отримаємо помилку компіляції</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>13</Id>
+    <Question>Як виглядає виклик процедури?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>ім'я процедури (список фактичних параметрів);</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я процедури (список формальних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я змінної: ім'я процедури (список фактичних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я змінної: ім'я процедури (список формальних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я процедури;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>14</Id>
+    <Question>Як виглядає виклик функції:</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>ім'я функції (список фактичних параметрів);</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я функції (список формальних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я змінної: ім'я функції (список фактичних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>var ім'я змінної: ім'я функції (список формальних параметрів);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я функції;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>15</Id>
+    <Question>Яку команду потрібно записати в виконувану частину функції, для того, щоб передати в блок викликів вихідне значення функції?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>ім'я функції:= результат;</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>return результат;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>результат:= ім'я функції;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ім'я функції(результат);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>результат (у кінець тіла)</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>16</Id>
+    <Question>Виберіть правильне твердження</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>кількість фактичних параметрів має збігатися з кількістю формальних</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>відповідні фактичні та формальні параметри повинні збігатися лише по порядку проходження</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>відповідні фактичні та формальні параметри повинні збігатися лише по типу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>кількість фактичних параметрів може бути більшою за кількістю формальних</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>кількість фактичних параметрів може бути меншою за кількістю формальних</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>17</Id>
+    <Question>Виберіть правильне твердження</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>формальні параметри є тимчасовими змінними - вони створюються в момент виклику підпрограми і знищуються в момент виходу з неї</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>фактичні параметри є тимчасовими змінними - вони створюються в момент виклику підпрограми і знищуються в момент виходу з неї</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>формальні параметри є копіями фактичних параметрів і вказують на ту ж саму ділянку пам'яті</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>формальні параметри є постійними змінними - вони створюються в момент першого виклику підпрограми і не знищуються доки програма не завершить свою роботу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>фактичні параметри є постійними змінними - вони створюються в момент першого виклику підпрограми і не знищуються доки програма не завершить свою роботу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>18</Id>
+    <Question>Яке правильне оголошення процедури?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>procedure MaxNumber(a,b: integer; var max: integer);</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure MaxNumber(integer: a,b; integer: max);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure MaxNumber(a,b: integer; var max: integer): integer;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure MaxNumber(a;b: integer, var max: integer);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>procedure MaxNumber(integer: a;b, integer: max);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>19</Id>
+    <Question>Яке правильне оголошення функції?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>function MaxNumber(a,b: integer): integer;</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function MaxNumber(integer: a,b; integer: max);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function MaxNumber(a,b: integer; var max: integer) = integer;</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function MaxNumber(a;b: integer, var max: integer);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>function MaxNumber(integer: a;b, integer: max);</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>20</Id>
+    <Question>У які способи у мові Паскаль може здійснюватися передача параметрів?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>По значенню і по посиланню</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>По значенню і по назві</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише по назві</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Лише по значенню</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>По назві і по посиланню</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>21</Id>
+    <Question>Як називаються параметри, що передаються по посиланню?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Параметрами-змінними</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Параметрами-значеннями</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Параметрами-посиланнями</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Посиланнями</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Параметрами</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>22</Id>
+    <Question>Яке слово потрібно додати в заголовку процедури, щоб передавати параметер по посиланню?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>var</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ref</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>ptr</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>val</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>param-ref</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>23</Id>
+    <Question>Як називають блоки в яких є доступними (видимими) певні локальні імена?</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Областю видимості</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Зоною доступу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Областю доступу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Зоною видимості</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Простором доступу</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>24</Id>
+    <Question>Виберіть правильне твердження</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Імена, описані в блоці, що відповідає всій програмі, називають глобальними</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Імена, описані в блоці, що відповідає всій програмі, називають локальними</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Імена, описані в блоці процедури, називають глобальними</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Імена, описані в блоці функції, називають глобальними</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Імена, описані в блоці процедури, називають процедурними</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+  <TestQuestionWithAnswerModel>
+    <Id>25</Id>
+    <Question>Виберіть правильне твердження</Question>
+    <Answers>
+      <PairOfStringBoolean>
+        <First>Глобальні імена зберігаються у сегменті даних, а локальні у стеці</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Глобальні імена зберігаються у стеці, а локальні у сегменті даних</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Глобальні імена зберігаються у черзі, а локальні у стеці</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Глобальні та локальні імена зберігаються у стеці</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Глобальні та локальні імена зберігаються у черзі</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </Answers>
+  </TestQuestionWithAnswerModel>
+</ArrayOfTestQuestionWithAnswerModel>
