@@ -96,14 +96,17 @@
                         </Grid>
                         <Button x:Name="buttonConfirm" FontFamily="Tahoma" Content="Підтвердити" HorizontalAlignment="Center" Margin="0,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" Height="47" Click="buttonConfirm_Click" FontSize="21.333" BorderBrush="White" Background="#FF00B632" Foreground="White"/>
                     </Grid>
-                    <Label x:Name="labelQuestionsLeft" Grid.Column="1" Content="Залишилося N питань" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="21.333" Foreground="#FF068500" Margin="0,20,0,0"></Label>
+                    <StackPanel Grid.Column="1">
+                        <Label x:Name="labelTimer" Content="Залишилося часу: " VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="21.333" Foreground="#FF068500" Margin="0,20,0,0" />
+                        <Label x:Name="labelQuestionsLeft" Content="Залишилося N питань" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="21.333" Foreground="#FF068500" Margin="0,20,0,0"></Label>
+                    </StackPanel>
                 </Grid>
                 <Button x:Name="testsPreviousBtn" FontFamily="Tahoma" Content="Попереднє питання" HorizontalAlignment="Left" Margin="30,0,0,20" Grid.Row="2" VerticalAlignment="Bottom" Click="testsPreviousBtn_Click" FontSize="21.333" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" Height="50" Width="220" IsEnabled="False"/>
                 <Button x:Name="testsNextBtn" FontFamily="Tahoma" Content="Наступне питання" HorizontalAlignment="Right" Margin="0,0,30,20" Grid.Row="2" VerticalAlignment="Bottom" Click="testsNextBtn_Click" Height="50" FontSize="21.333" Background="#FF00A652" Foreground="White" BorderBrush="{x:Null}" Width="220"/>
                 <Button x:Name="buttonFinishTests" FontFamily="Tahoma" Content="Завершити тестування" HorizontalAlignment="Center" Margin="0,10,0,20" Grid.Row="2" VerticalAlignment="Bottom" Height="50" Click="buttonFinishTests_Click" FontSize="21.333" Background="#FF007E3E" Foreground="White" BorderBrush="#FF490000" Width="250"/>
             </Grid>
         </Grid>
-        <Grid Name="GridAbout" Margin="0,45,0,0" Visibility="Hidden">
+        <Grid Name="GridAbout" Margin="0,40,0,0" Visibility="Hidden">
             <RichTextBox x:Name="richTextBoxAbout" IsReadOnly="True" Grid.Column="1" VerticalScrollBarVisibility="Visible">
                 <FlowDocument>
                     <Paragraph>

@@ -5,6 +5,8 @@ using System.Windows.Controls;
 using System.Data;
 using System.Windows.Media;
 using System.Text;
+using System;
+using System.Windows.Threading;
 
 namespace EducationalProgram_PaskalProcAndFunc
 {
@@ -18,10 +20,13 @@ namespace EducationalProgram_PaskalProcAndFunc
         private List<TestQuestionWithAnswerModel> _selectedTests;
         private List<int> _userAnswers;
         private List<CheckBox> _currentQuestionAnswers;
+        private TimeSpan _timer;
+        private DispatcherTimer _dispatcherTimer;
 
         private readonly TestQuestionAnswerRepository _testQuestionAnswerRepository;
         private readonly TheoryRepository _theoryRepository;
         private readonly DocumentLoader _documentLoader;
+        private readonly TimeSpan _testingTime;
 
         private const int AmountOfTestQuestions = 10;
         private const int AmountOfPossibleAnswers = 5;
@@ -32,11 +37,13 @@ namespace EducationalProgram_PaskalProcAndFunc
             _testQuestionAnswerRepository = new TestQuestionAnswerRepository();
             _theoryRepository = new TheoryRepository();
             _documentLoader = new DocumentLoader();
+            _testingTime = new TimeSpan(0, 10, 0);
 
             InitializeComponent();
 
             treeViewContent.ItemsSource = _theoryRepository.TheoryChapterPathes.Value.Select(p => new TreeViewItem { Header = p.Item1 } );
             LoadAndShowTheoryChapter(_indexOfCurrentTheoryChapter);
+            SetupTimer();
         }
 
         private void menuitemTheory_Click(object sender, RoutedEventArgs e)
@@ -162,6 +169,10 @@ namespace EducationalProgram_PaskalProcAndFunc
             }
 
             ShowTest(_indexOfCurrentTest);
+
+            _timer = _testingTime;
+            labelTimer.Content = string.Format("Залишилося часу: {0}", _timer);
+            _dispatcherTimer.Start();
         }
 
         private string GetQuestionsLeftText(int amountOfQuestions)
@@ -229,26 +240,26 @@ namespace EducationalProgram_PaskalProcAndFunc
                 "Є питання без підповіді, Ви дійсно бажаєте завершити тестування?" :
                 "Ви дійсно бажаєте завершити тестування?";
             MessageBoxResult dialogResult = MessageBox.Show(dialogMessage, "Завершити тестування?", MessageBoxButton.YesNo);
-            switch (dialogResult)
+            if(dialogResult == MessageBoxResult.Yes)
             {
-                case MessageBoxResult.Yes:
-                    {
-                        int mark = 0;
-                        for (int i = 0; i < _selectedTests.Count; i++)
-                        {
-                            if (_selectedTests[i].Answers.IndexOf(_selectedTests[i].Answers.Find(p => p.Second == true)) == _userAnswers[i])
-                            {
-                                mark++;
-                            }
-                        }
-
-                        MessageBox.Show(string.Format("Ваш результат {0} з {1}", mark, treeViewTests.Items.Count));
-                        menuitemTheory_Click(sender, e);
-                    }
-                    break;
-                default:
-                    break;
+                FinishTests();
             }
+        }
+
+        private void FinishTests()
+        {
+            int mark = 0;
+            for (int i = 0; i < _selectedTests.Count; i++)
+            {
+                if (_selectedTests[i].Answers.IndexOf(_selectedTests[i].Answers.Find(p => p.Second == true)) == _userAnswers[i])
+                {
+                    mark++;
+                }
+            }
+
+            MessageBox.Show(string.Format("Ваш результат {0} з {1}", mark, treeViewTests.Items.Count));
+            _dispatcherTimer.Stop();
+            menuitemTheory_Click("", new RoutedEventArgs());
         }
 
         private void treeViewTests_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
@@ -283,6 +294,23 @@ namespace EducationalProgram_PaskalProcAndFunc
             labelQuestion.Content = string.Format("Питання #{0}", _indexOfCurrentTest + 1);
             testsPreviousBtn.IsEnabled = _indexOfCurrentTest != 0;
             testsNextBtn.IsEnabled = _indexOfCurrentTest != treeViewTests.Items.Count - 1;
+        }
+
+        private void SetupTimer()
+        {
+            _dispatcherTimer = new DispatcherTimer();
+            _dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            _dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            _timer = _timer.Subtract(new TimeSpan(0, 0, 1));
+            labelTimer.Content = string.Format("Залишилося часу: {0}", _timer);
+            if (_timer.TotalSeconds == 0)
+            {
+                FinishTests();
+            }
         }
 
         #endregion
